@@ -1,69 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import { Navbaritems } from './Navbaritems';
+import { HiDesktopComputer } from "react-icons/hi";
+import './Navbar.css'
+import { IconContext } from 'react-icons';
 
-function Navbar() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
-
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  const showButton = () => {
-    if (window.innerWidth <= 960) {
-      setButton(false);
-    } else {
-      setButton(true);
+class navbar extends Component{
+    render(){
+        return (
+            <div className = "navbar">
+                <IconContext.Provider value ={{ color: '#696969',}}>
+                <div className = "navbar-header">
+                    <h2 className = "navbar-header-text">NUSModuleMapping <HiDesktopComputer/></h2> 
+                </div>
+                <nav>
+                    <ul className="navbar-menu-items">
+                        {Navbaritems.map((item, index) => {
+                            return(
+                                <li key = {index} className={item.cName}>
+                                    <Link to={item.path}>
+                                        {item.icon}
+                                        <span>{item.title}</span>
+                                    </Link>
+                                </li>
+                            ) 
+                        })}
+                    </ul>
+                </nav>
+                </IconContext.Provider>
+            </div>
+        )
     }
-  };
-
-  useEffect(() => {
-    showButton();
-  }, []);
-
-  window.addEventListener('resize', showButton);
-
-  return (
-    <>
-      <nav className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            NUSModuleMapping
-            <i class='fab fa-typo3' />
-          </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-          </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/services' className='nav-links' onClick={closeMobileMenu}>
-                Modules
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/products'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Study Plan
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link
-                to='/'
-                className='nav-links'
-                onClick={closeMobileMenu}
-              >
-                Dark Mode
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
 }
 
-export default Navbar;
+export default navbar;
