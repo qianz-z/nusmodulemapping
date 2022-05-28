@@ -11,7 +11,7 @@ class navbar extends Component{
             <div className = "navbar">
                 <IconContext.Provider value ={{ color: '#696969',}}>
                 <div className = "navbar-header">
-                    <h2 className = "navbar-header-text">NUSModuleMapping <HiDesktopComputer/></h2> 
+                    <h2 className = "navbar-header-text"><a href = "/">NUSModuleMapping</a><HiDesktopComputer/></h2> 
                 </div>
                 <nav>
                     <ul className="navbar-menu-items">
