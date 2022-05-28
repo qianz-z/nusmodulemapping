@@ -1,0 +1,19 @@
+.modules{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: block;
+    left: 20%; 
+    top: 12%;
+    width: 50%;
+}
+
+.modules-one{
+    justify-content: center;
+    align-items: center;
+    padding-block-end: 2%;
+}
+
+.modules-name{
+    color: #ff4500;
+}
