@@ -27,7 +27,7 @@ const Modules = () => {
                     <h3 className = 'modules-name'>{module.code} {module.name}</h3>
                     <p>Computer Science <GoPrimitiveDot/> {module.mc} MCs</p>
                     <p>Prerequisites {module.prerequisites}</p>
-                    <p>Preclusions {module.preclusions} </p>
+                    <p>Preclusions <span>{module.preclusions}</span></p> 
                 </div>
             )}
 

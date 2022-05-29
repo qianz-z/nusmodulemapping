@@ -17,3 +17,8 @@
 .modules-name{
     color: #ff4500;
 }
+
+.modules-text{
+    color: #ff4500; 
+    white-space: initial;
+}
