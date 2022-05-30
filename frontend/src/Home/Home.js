@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import '../App.css';
+import HeroSection from './HeroSection';
 
-const Home = () =>{
-    return(
-        <div className = "home">
-            <h1 className="text-center">
-                Home
-            </h1>
-        </div>
-    )
+
+function Home() {
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 }
 
 export default Home;

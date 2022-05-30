@@ -15,7 +15,6 @@ const App = () => {
           <Route exact path = "/" element = {<Home/>}/>
           <Route exact path = "/modules" element = {<Modules/>}/>
           <Route exact path = "/studyplan" element = {<StudyPlan/>}/>
-
         </Routes>
       </main> 
     </Router>

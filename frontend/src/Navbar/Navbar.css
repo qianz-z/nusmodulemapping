@@ -4,6 +4,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0;
 }
 
 .navbar-header-text{
@@ -23,17 +24,19 @@
     justify-content: center;
     position: relative;
     overflow: auto;
-
 }
 
 .navbar-menu-items{
     color: #484848;
     display: start;
     width: 300px;
+    height: 100%;
     padding: 1rem;
     list-style-type: none;
     justify-content: center;
-    position: relative;
+    position: absolute;
+    background-color: white;
+    margin: 0;
 }   
 
 .nav-text{
