@@ -16,7 +16,7 @@ export const Navbaritems = [
     },
     {
         title: 'Dark Mode',
-        path: '/',
+        path: '/modulepage',
         icon: <BsIcons.BsLightbulb />,
         cName: 'nav-text'
     },

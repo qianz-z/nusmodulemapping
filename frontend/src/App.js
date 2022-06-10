@@ -3,6 +3,7 @@ import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
+import ModulePage from './ModulePage/ModulePage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route exact path = "/" element = {<Home/>}/>
           <Route exact path = "/modules" element = {<Modules/>}/>
           <Route exact path = "/studyplan" element = {<StudyPlan/>}/>
+          <Route exact path = "/modulepage" element = {<ModulePage/>}/>
         </Routes>
       </main> 
     </Router>
