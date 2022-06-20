@@ -1,10 +1,3 @@
-.studyplan {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-}
-
 #dark .modules, .studyplan{
     background-color: #303030;
     color: white;
@@ -15,4 +8,17 @@
     color: black;
 }
 
+.switch{
+    margin-left: 90%;
+    margin-top: -3%;
+    z-index: 9999;
+    position: relative;
+}
 
+#light .switch label{
+    color: black;
+}
+
+#dark .switch label{
+    color: white;
+}

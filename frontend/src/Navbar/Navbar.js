@@ -1,6 +1,6 @@
 import React, { Component, useTheme } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbaritems } from './Navbaritems_light';
+import { Navbaritems } from './Navbaritems';
 import { HiDesktopComputer } from "react-icons/hi";
 import './Navbar.css'
 import { IconContext } from 'react-icons';

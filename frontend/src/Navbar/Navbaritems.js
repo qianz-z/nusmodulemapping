@@ -13,11 +13,5 @@ export const Navbaritems = [
         path: '/studyplan',
         icon: <BsIcons.BsCalendar4 />,
         cName: 'nav-text'
-    },
-    {
-        title: 'Light Mode',
-        path: '/modulepage',
-        icon: <BsIcons.BsFillSunFill />,
-        cName: 'nav-text'
-    },
+    }
 ]
