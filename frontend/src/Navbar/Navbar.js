@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component, useTheme } from 'react';
 import { Link } from 'react-router-dom';
-import { Navbaritems } from './Navbaritems';
+import { Navbaritems } from './Navbaritems_light';
 import { HiDesktopComputer } from "react-icons/hi";
 import './Navbar.css'
 import { IconContext } from 'react-icons';
 
-class navbar extends Component{
+class Navbar extends Component{
     render(){
         return (
             <div className = "navbar">
@@ -33,4 +33,4 @@ class navbar extends Component{
     }
 }
 
-export default navbar;
+export default Navbar;

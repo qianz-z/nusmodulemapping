@@ -21,7 +21,7 @@ const Modules = () => {
     })
 
     return(
-        <div className='modules'>
+        <div className='modules' >
             {modules.map(module =>
                 <div className = 'modules-one'>
                     <h3 className = 'modules-name'>{module.code} {module.name}</h3>

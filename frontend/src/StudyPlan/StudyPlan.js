@@ -6,6 +6,7 @@ const studyplan = () =>{
             <h1 className="text-center">
                 Study Plan
             </h1>
+            <p>hello</p>
         </div>
     )
 }
