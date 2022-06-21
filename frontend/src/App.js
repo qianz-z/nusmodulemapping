@@ -3,8 +3,6 @@ import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
-import ModulePage from './ModulePage/ModulePage';
-import DarkMode from './DarkMode/DarkMode';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState } from 'react';
 import ReactSwitch from 'react-switch';
