@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from "react-dom";
 import map from "./Map";
 import MindMap from 'react-mindmap'
 
@@ -14,5 +13,4 @@ const studyplan = () =>{
     )
 }
 
-render(<studyplan />, document.getElementById("root"));
 export default studyplan;
