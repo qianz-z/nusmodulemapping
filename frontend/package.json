@@ -15,12 +15,8 @@
     "react-mindmap": "^2.1.6",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
-<<<<<<< HEAD
-    "react-scripts": "^5.0.1",
-=======
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
->>>>>>> bd3797f7ad108678baa1bf2d576ae0b74025073d
     "touch-cli": "^0.0.1",
     "use-local-storage": "^2.3.6",
     "web-vitals": "^2.1.4"
