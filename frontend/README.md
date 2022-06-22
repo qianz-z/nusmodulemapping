@@ -16,3 +16,9 @@ nodemon server.js
 
 nodemon server.js
 cd frontend -> npm start
+
+react-responsive carousel
+npm i react-responsive-carousel
+
+react-mindmap
+npm i react-mindmap
