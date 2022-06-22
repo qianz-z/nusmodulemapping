@@ -1,0 +1,9 @@
+.studyplan {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: block;
+    left: 20%; 
+    top: 12%;
+    width: 75vw;
+}
