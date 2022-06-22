@@ -1,12 +1,12 @@
 .modules{
     align-items: center;
     justify-content: center;
-    position: absolute;
-    display: block;
+    position: static;
     height: 100vh;
     width: 100%;
-    left: 20%; 
-    top: 12%;
+    margin-top: -10%;
+    margin-left: 19%;
+
 }
 
 

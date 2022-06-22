@@ -1,6 +1,14 @@
-.studyplan{
-    margin-right: 12rem;
-    background-color: #303030;
+.studyplan {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: block;
+    z-index: -100; /* removing this allows map to move */
+    left: 5%;
+    height: 100vh;
+    width: 100%;
+    margin-right: 10%;
+    margin-top: -9%;
 }
 
 #dark .modules, .studyplan{
@@ -14,12 +22,13 @@
 }
 
 .switch{
-    margin-left: 2%;
-    margin-top: -35%;
+    margin-left: 85%;
+    margin-top: -52%;
     z-index: 9999;
     position: absolute;
 }
 
+/*
 #light .switch label{
     color: black;
 }
@@ -27,3 +36,4 @@
 #dark .switch label{
     color: white;
 }
+*/

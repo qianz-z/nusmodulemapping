@@ -35,7 +35,7 @@
     padding: 2% 0% 1% 1%;
     list-style-type: none;
     justify-content: center;
-    position: absolute;
+    position: relative;
     background-color: white;
     margin: 0;
 }   
