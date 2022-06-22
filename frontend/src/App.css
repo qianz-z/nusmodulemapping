@@ -1,5 +1,10 @@
-#dark .modules, .studyplan{
+.studyplan{
+    margin-right: 12rem;
     background-color: #303030;
+}
+
+#dark .modules, .studyplan{
+    background-color: #585858;
     color: white;
 }
 
@@ -9,10 +14,10 @@
 }
 
 .switch{
-    margin-left: 90%;
-    margin-top: -3%;
+    margin-left: 2%;
+    margin-top: -35%;
     z-index: 9999;
-    position: relative;
+    position: absolute;
 }
 
 #light .switch label{
