@@ -13,14 +13,14 @@ function Home() {
         <div>
           <div className='module-name'>
             CS1010 {`\n`}
-            Programming Methodology   
+            Programming Methodology
             <h1>
               This module introduces the fundamental concepts of problem solving by computing and programming using an imperative programming language. It is the first and foremost introductory course to computing. Topics covered include computational thinking and computational problem solving, designing and specifying an algorithm, basic problem formulation and problem solving approaches, program development, coding, testing and debugging, fundamental programming constructs (variables, types, expressions, assignments, functions, control structures, etc.), fundamental data structures (arrays, strings, composite data types), basic sorting, and recursion.
             </h1>
           </div>
         </div>
         <div>
-                  <div className='module-name'>
+          <div className='module-name'>
             CS2100 {`\n`}
             Computer Organisation
             <h1>
