@@ -22,3 +22,6 @@ npm i react-responsive-carousel
 
 react-mindmap
 npm i react-mindmap
+
+cd backend
+npm install dotenv --save

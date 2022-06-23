@@ -1,17 +1,25 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
+const app = express();
 app.use(cors());
 app.use(express.json());
-
-// connect to mongoose
-mongoose.connect("mongodb+srv://orbital:orbital@cluster0.b5il0.mongodb.net/modules")
+dotenv.config();
 
 // require route
 app.use("/", require("./routes/moduleRoute"));
 
-app.listen(3001, function() {
-    console.log("connect");
+app.get('/', (req, res) => {
+    res.send('Hello to NUSModuleMapping API');
+})
+
+// connect to mongoose
+mongoose.connect(process.env.CONNECTION_URL);
+
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, function() {
+    console.log(`Server Running on Port: http://localhost:${PORT}`);
 })
