@@ -31,12 +31,10 @@ const Modules = () => {
         <div className='modules' >
             {modules.map(module =>
                 <div className='modules-one'>
-                    <a onClick={() => {toPage(module)}}>
-                        <h3 className='modules-name'>{module.code} {module.name}</h3>
-                        <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
-                        <p>Prerequisites {module.prerequisites}</p>
-                        <p>Preclusions <span>{module.preclusions}</span></p>
-                        </a>
+                    <h3 className='modules-name'><a onClick={() => {toPage(module)}}>{module.code} {module.name}</a></h3>
+                    <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
+                    <p>Prerequisites {module.prerequisites}</p>
+                    <p>Preclusions <span>{module.preclusions}</span></p>
                 </div>
             )}
         </div>

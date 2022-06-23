@@ -19,6 +19,7 @@
 .modules-name{
     color: #ff4500;
     padding-left: 5%;
+    cursor: pointer;
 }
 
 p {
