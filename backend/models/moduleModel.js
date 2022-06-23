@@ -10,12 +10,6 @@ const moduleSchema = new mongoose.Schema({
     // one hop prerequisites
     prerequisites: [mongoose.SchemaTypes.ObjectId],
     preclusions: [String],
-    /*
-    graph:{
-        prerequisites_name: [String],
-        prerequisites_code: [String]
-    }
-    */
 })
 
 module.exports = mongoose.model("Module", moduleSchema)

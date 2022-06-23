@@ -14,10 +14,4 @@ export const Navbaritems = [
         icon: <BsIcons.BsCalendar4 />,
         cName: 'nav-text'
     },
-    {
-        title: 'Dark Mode',
-        path: '/modulepage',
-        icon: <BsIcons.BsLightbulb />,
-        cName: 'nav-text'
-    },
 ]
