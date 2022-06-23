@@ -3,15 +3,18 @@ import '../App.css';
 import './ModulePage.css';
 import { GoPrimitiveDot } from "react-icons/go";
 import { Button } from '../Components/Button';
+import {useLocation} from 'react-router-dom';
 
 function ModulePage() {
+    const location = useLocation();
+
     return (
         <div className='module-container'>
             <h1>
-                Insert Module Code {`\n`}
-                Insert Module Name Here
+                {location.state.code} {`\n`}
+                {location.state.name}
                 <p>
-                    Computer Science <GoPrimitiveDot /> Insert MCs here
+                    Computer Science <GoPrimitiveDot /> {location.state.mc} MCs
                     <hr
                         style={{
                             background: 'white',
@@ -24,15 +27,14 @@ function ModulePage() {
                         Insert Module Details Here
                         {`\n`}{`\n`}{`\n`}{`\n`}
                         Preclusions:{`\n`}
-                        Insert Preclusions Here
+                        {location.state.preclusions}
                         {`\n`}{`\n`}{`\n`}{`\n`}
                         Prerequisites:{`\n`}
-                        Insert Prerequisites Here
+                        {location.state.prerequisites}
                         {`\n`}{`\n`}
                         <Button
                             buttonSize='btn--large'
                             children='Add to Study Plan'
-                            type
                             //onClick
                             buttonStyle='btn--primary'>
                         </Button>
