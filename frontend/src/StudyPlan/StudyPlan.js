@@ -4,15 +4,12 @@ import map from "./Map";
 import MindMap from 'react-mindmap';
 
 const studyplan = () => {
+
     return (
         <div className='studyplan'>
             <MindMap nodes={map.nodes} connections={map.connections} />
-            <p>
-                Modules Added
-            </p>
-            <h1>
-                CS1010 
-            </h1>
+            <p>Modules Added</p>
+            
         </div>
     )
 }
