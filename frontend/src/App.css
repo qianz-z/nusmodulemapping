@@ -11,12 +11,12 @@
     margin-top: -9%;
 }
 
-#dark .module{
+#dark .modules{
     background-color: #585858;
     color: white;
 }
 
-#light .module{
+#light .modules{
     background-color: white;
     color: black;
 }
