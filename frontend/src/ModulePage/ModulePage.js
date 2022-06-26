@@ -13,16 +13,9 @@ function ModulePage() {
             <h1>
                 {location.state.code} {`\n`}
                 {location.state.name}
+                <p>Computer Science <GoPrimitiveDot /> {location.state.mc} MCs </p>
+                <hr style={{ borderColor: 'white', height: '2px', }}/>
                 <p>
-                    Computer Science <GoPrimitiveDot /> {location.state.mc} MCs
-                    <hr
-                        style={{
-                            background: 'white',
-                            color: 'white',
-                            borderColor: 'white',
-                            height: '2px',
-                        }}
-                    />
                     <g>
                         Insert Module Details Here
                         {`\n`}{`\n`}{`\n`}{`\n`}
@@ -41,7 +34,6 @@ function ModulePage() {
                     </g>
                 </p>
             </h1>
-
         </div >
     );
 }

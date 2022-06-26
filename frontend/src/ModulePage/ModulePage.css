@@ -1,5 +1,4 @@
 .module-container {
-    background-color: grey;
     height: 100vh;
     width: 1547px;
     display: flex;
@@ -9,20 +8,19 @@
   }
 
   .module-container > h1 {
-    color: #fff;
+
     font-size: 64px;
     text-align: left;
     white-space: pre-line;
   }
 
   .module-container > h1 > p {
-      color:#fff;
       font-size: 24px;
       text-align: left;
   }
 
   .module-container > h1 > p > g{
-    color:#fff;
+    
     font-size: 20px;
     text-align: left;
     white-space: pre-line;
