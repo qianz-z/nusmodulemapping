@@ -15,7 +15,7 @@ const Modules = () => {
     }])
 
     useEffect(() => {
-        fetch("/modules").then(res => {
+        fetch("https://nusmodulemapping.herokuapp.com/modules").then(res => {
             if (res.ok) {
                 return res.json()
             }

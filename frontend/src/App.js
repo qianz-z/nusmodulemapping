@@ -6,7 +6,6 @@ import StudyPlan from './StudyPlan/StudyPlan';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState } from 'react';
 import ReactSwitch from 'react-switch';
-//npm install react-switch
 import './App.css';
 import ModulePage from './ModulePage/ModulePage';
 
@@ -51,9 +50,9 @@ const App = () => {
             <Route exact path = "/" element = {<Home/>}/>
             <Route exact path = "/modules" element = {<Modules/>}/>
             <Route exact path = "/studyplan" element = {<StudyPlan/>}/>
-            <Route exact path = "/modules/:code" element = {<ModulePage/>}/>
+            <Route exact path = "/modules/:code" element = {<ModulePage/>} />
           </Routes>
-          </Router>
+        </Router>
 
           <div className='switch'>
             <label> {theme === "light" ? "Light Mode" : "Dark Mode"} </label>
