@@ -11,12 +11,12 @@
     margin-top: -9%;
 }
 
-#dark .modules, .studyplan{
+#dark .modules, #light .studyplan{
     background-color: #585858;
     color: white;
 }
 
-#light .modules, .studyplan{
+#light .modules, #light .studyplan{
     background-color: white;
     color: black;
 }

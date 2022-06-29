@@ -9,7 +9,6 @@ const studyplan = () => {
         <div className='studyplan'>
             <MindMap nodes={map.nodes} connections={map.connections} />
             <p>Modules Added</p>
-            
         </div>
     )
 }
