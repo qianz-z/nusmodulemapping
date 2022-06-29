@@ -1,28 +1,26 @@
-export default {
-    title: "Study Plan",
+import React from "react";
+
+let x = 100;
+let y = 100;
+const oldMap = {
     nodes: [
       {
         text: "CS2106",
-        url: "",
         fx: -200,
         fy: -200,
       },
       {
         text: "CS2100",
-        url: "",
         fx: -400,
         fy: -200,
       },
       {
         text: "CS1010",
-        url: "",
         fx: -700,
         fy: -183.5539283546699,
       },
       {
         text: "CS2040C",
-        note: "",
-        url: "",
         fx: -400,
         fy: -60.07462866512333,
       },
@@ -79,4 +77,20 @@ export default {
       }
     ]
   };
+
+function Map (props) {
+  const { Mods } = props; 
+
+  return (
+    Mods.map((item))
+  )
+}
+
+let item = "test item";
+const test = (item) = {
   
+  nodes:[{text: item, fx: x, fy: y}], connections:[]
+  
+}
+
+export default test;

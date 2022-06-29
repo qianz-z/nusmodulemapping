@@ -5,8 +5,9 @@ import { GoPrimitiveDot } from "react-icons/go";
 import { Button } from '../Components/Button';
 import {useLocation} from 'react-router-dom';
 
-function ModulePage() {
+function ModulePage(props) {
     const location = useLocation();
+    const {onAdd} = props;
 
     return (
         <div className='module-container'>
@@ -25,10 +26,10 @@ function ModulePage() {
                         Prerequisites:{`\n`}
                         {location.state.prerequisites}
                         {`\n`}{`\n`}
-                        <Button
+                        <Button 
                             buttonSize='btn--large'
                             children='Add to Study Plan'
-                            //onClick
+                            onClick={onAdd(location.state)}
                             buttonStyle='btn--primary'>
                         </Button>
                     </g>

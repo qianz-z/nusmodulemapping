@@ -7,8 +7,7 @@ import { Carousel } from 'react-responsive-carousel';
 function Home() {
   return (
     <div className='hero-container'>
-      <h1>Spotlight Modules
-      </h1>
+      <h1>Spotlight Modules</h1>
       <Carousel>
         <div>
           <div className='module-name'>

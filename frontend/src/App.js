@@ -39,21 +39,34 @@ const App = () => {
     }
   };
 
+  const [Mods, setMods] = useState([])
+
+  const onAdd = (product) => {
+    const exist = Mods.find((x) => x.code === product.code);
+    if (!exist) {
+      setMods([...Mods, { ...product}]);
+    }
+  }
+
+  const onRemove = (product) => {
+    const exist = Mods.find((x) => x.code === product.code);
+    if (exist) {
+      setMods(Mods.filter((x) => x.code !== product.code));
+    }
+  }
 
   return (
-    
     <ThemeContext.Provider value = {{ theme, switchTheme }} >
       <main id={theme}>
         <Router>
           <Navbar/>
           <Routes>
             <Route exact path = "/" element = {<Home/>}/>
-            <Route exact path = "/modules" element = {<Modules/>}/>
-            <Route exact path = "/studyplan" element = {<StudyPlan/>}/>
-            <Route exact path = "/modules/:code" element = {<ModulePage/>} />
+            <Route exact path = "/modules" element = {<Modules onAdd = {onAdd}/>}/>
+            <Route exact path = "/studyplan" element = {<StudyPlan Mods={Mods} onRemove = {onRemove}/>}/>
+            <Route exact path = "/modules/:code" element = {<ModulePage onAdd = {onAdd}/>} />
           </Routes>
         </Router>
-
           <div className='switch'>
             <label> {theme === "light" ? "Light Mode" : "Dark Mode"} </label>
             <ReactSwitch onChange={switchTheme} checked = {theme === "dark"}/>
@@ -61,6 +74,7 @@ const App = () => {
         </main> 
       
     </ThemeContext.Provider>
+    
   );
 }
 
