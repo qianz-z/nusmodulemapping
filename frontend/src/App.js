@@ -65,7 +65,7 @@ const App = () => {
     <ThemeContext.Provider value = {{ theme, switchTheme }} >
       <main id={theme}>
         <Router>
-          <Navbar/>
+          <Navbar switchTheme = {switchTheme} theme = {theme}/>
           <Routes>
             <Route exact path = "/" element = {<Home/>}/>
             <Route exact path = "/modules" element = {<Modules onAdd = {onAdd}/>}/>
@@ -73,12 +73,7 @@ const App = () => {
             <Route exact path = "/modules/:code" element = {<ModulePage onAdd = {onAdd}/>} />
           </Routes>
         </Router>
-          <div className='switch'>
-            <label> {theme === "light" ? "Light Mode" : "Dark Mode"} </label>
-            <ReactSwitch onChange={switchTheme} checked = {theme === "dark"}/>
-          </div>
         </main> 
-      
     </ThemeContext.Provider>
     
   );

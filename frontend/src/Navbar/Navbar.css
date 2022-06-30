@@ -67,3 +67,8 @@
 span{
     margin-left: 8%;
 }
+
+label {
+    font-size: 1.3vw;
+    color: #551a8b;
+}
