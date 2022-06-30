@@ -23,6 +23,7 @@ const Modules = () => {
     })
     const navigate = useNavigate();
 
+    //navigation and transfer of data from main modules page to individual modules page
     const toPage = (module) => {
         navigate(`/modules/:${module.code}`, { state: module });
     }

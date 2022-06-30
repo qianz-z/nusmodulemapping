@@ -12,6 +12,7 @@ import ModulePage from './ModulePage/ModulePage';
 export const ThemeContext = createContext(null);
 
 const App = () => {
+  //light/dark mode toggle 
   const body = document.body;
   let theme;
 
@@ -39,17 +40,12 @@ const App = () => {
     }
   };
 
-  const [Mods, setMods] = useState([])
+  //Passing data of Mods, Add/Remove Mods from study plan
+  const [Mods, setMods] = useState(JSON.parse(localStorage.getItem('Mods')) ?? [])
+
   useEffect(() => {
-    localStorage.setItem('Mods', JSON.stringify(Mods));
+      localStorage.setItem('Mods', JSON.stringify(Mods));
   }, [Mods]);
-  //const Mods = JSON.parse(localStorage.getItem('Mods'));
-  useEffect(() => {
-    const Mods = JSON.parse(localStorage.getItem('Mods'));
-    if (Mods) {
-     setMods(Mods);
-    }
-  }, []);
 
   const onAdd = (product) => {
     const exist = Mods.find((x) => x.code === product.code);
