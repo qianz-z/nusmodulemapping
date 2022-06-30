@@ -3,29 +3,19 @@ import '../App.css';
 import './ModulePage.css';
 import { GoPrimitiveDot } from "react-icons/go";
 import { Button } from '../Components/Button';
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 function ModulePage(props) {
     const location = useLocation();
-    const {Mods, onAdd, onRemove} = props;
-    
-    function handleClick () {
-        if (Mods.find((x) => x.code === location.state.code)) {
-            onRemove(location.state);
-        }
-        else {
-            onAdd(location.state)
-        }
-         
-    } 
+    const { Mods, onAdd, onRemove } = props;
 
     return (
         <div className='module-container'>
             <h1>
                 {location.state.code} {`\n`}
                 {location.state.name}
-                <p>Computer Science <GoPrimitiveDot/> {location.state.mc} MCs </p>
-                <hr style={{ borderColor: 'white', height: '2px', }}/>
+                <p>Computer Science <GoPrimitiveDot /> {location.state.mc} MCs </p>
+                <hr style={{ borderColor: 'white', height: '2px', }} />
                 <p>
                     <g>
                         {location.state.details}
@@ -36,11 +26,11 @@ function ModulePage(props) {
                         Prerequisites:{`\n`}
                         {location.state.prereq}
                         {`\n`}{`\n`}
-                        <Button 
+                        <Button
                             buttonSize='btn--large'
-                            onClick = {handleClick}
+                            onClick={() => onAdd(location.state)}
                             buttonStyle='btn--primary'>
-                                {Mods.find((x) => x.code === location.state.code) ? "Remove from Study Plan" :  "Add to Study Plan"}
+                            {Mods.find((x) => x.code === location.state.code) ? "Remove from Study Plan" : "Add to Study Plan"}
                         </Button>
                     </g>
                 </p>

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './Modules.css';
 import { GoPrimitiveDot } from "react-icons/go";
 import { useNavigate } from 'react-router-dom';
+import { Button } from '../Components/Button';
 
-
-function Modules (props) {
+function Modules(props) {
     const [modules, setModules] = useState([{
         name: '',
         code: '',
@@ -21,8 +21,8 @@ function Modules (props) {
         }).then(jsonRes => setModules(jsonRes));
     })
     const navigate = useNavigate();
-    const {Mods, onAdd, onRemove} = props;
-    
+    const { Mods, onAdd, onRemove } = props;
+
     //navigation and transfer of data from main modules page to individual modules page
     const toPage = (module) => {
         navigate(`/modules/:${module.code}`, { state: module });
@@ -36,6 +36,13 @@ function Modules (props) {
                     <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
                     <p>Prerequisites <span>{module.prereq}</span></p>
                     <p>Preclusions <span>{module.preclusions}</span></p>
+                    <p>
+                        <Button buttonSize='btn--medium'
+                            onClick={() => onAdd(module)}
+                            buttonStyle='btn--primary'>
+                            {Mods.find((x) => x.code === module.code) ? "Remove from Study Plan" : "Add to Study Plan"}
+                        </Button>
+                    </p>
                 </div>
             )}
         </div>

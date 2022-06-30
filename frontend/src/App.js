@@ -51,6 +51,9 @@ const App = () => {
     if (!exist) {
       setMods([...Mods, { ...product}]);
     }
+    else {
+      onRemove(product);
+    }
   }
 
   const onRemove = (product) => {
