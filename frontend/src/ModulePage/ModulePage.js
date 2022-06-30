@@ -7,7 +7,17 @@ import {useLocation} from 'react-router-dom';
 
 function ModulePage(props) {
     const location = useLocation();
-    const {onAdd} = props;
+    const {Mods, onAdd, onRemove} = props;
+    
+    function handleClick () {
+        if (Mods.find((x) => x.code === location.state.code)) {
+            onRemove(location.state);
+        }
+        else {
+            onAdd(location.state)
+        }
+         
+    } 
 
     return (
         <div className='module-container'>
@@ -28,9 +38,9 @@ function ModulePage(props) {
                         {`\n`}{`\n`}
                         <Button 
                             buttonSize='btn--large'
-                            children='Add to Study Plan'
-                            onClick={onAdd(location.state)}
+                            onClick = {handleClick}
                             buttonStyle='btn--primary'>
+                                {Mods.find((x) => x.code === location.state.code) ? "Remove from Study Plan" :  "Add to Study Plan"}
                         </Button>
                     </g>
                 </p>

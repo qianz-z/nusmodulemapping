@@ -5,7 +5,6 @@ import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
-import ReactSwitch from 'react-switch';
 import './App.css';
 import ModulePage from './ModulePage/ModulePage';
 
@@ -68,14 +67,13 @@ const App = () => {
           <Navbar switchTheme = {switchTheme} theme = {theme}/>
           <Routes>
             <Route exact path = "/" element = {<Home/>}/>
-            <Route exact path = "/modules" element = {<Modules onAdd = {onAdd}/>}/>
+            <Route exact path = "/modules" element = {<Modules Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>}/>
             <Route exact path = "/studyplan" element = {<StudyPlan Mods={Mods} onRemove = {onRemove}/>}/>
-            <Route exact path = "/modules/:code" element = {<ModulePage onAdd = {onAdd}/>} />
+            <Route exact path = "/modules/:code" element = {<ModulePage Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>} />
           </Routes>
         </Router>
         </main> 
     </ThemeContext.Provider>
-    
   );
 }
 

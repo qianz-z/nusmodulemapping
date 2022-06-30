@@ -1,27 +1,27 @@
 .module-container {
-    height: 100vh;
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    padding-left: 350px;
-  }
-
-  .module-container > h1 {
-
-    font-size: 64px;
-    text-align: left;
-    white-space: pre-line;
-  }
-
-  .module-container > h1 > p {
-      font-size: 24px;
-      text-align: left;
-  }
-
-  .module-container > h1 > p > g{
-    
-    font-size: 20px;
-    text-align: left;
-    white-space: pre-line;
+  margin-top: -10%;
+  height: 100vh;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  padding-left: 350px;
 }
+
+.module-container>h1 {
+  font-size: 64px;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.module-container>h1>p {
+  font-size: 24px;
+  text-align: left;
+}
+
+.module-container>h1>p>g {
+  font-size: 20px;
+  text-align: left;
+  white-space: pre-line;
+}
+

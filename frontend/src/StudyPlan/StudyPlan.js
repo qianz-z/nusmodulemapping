@@ -46,10 +46,9 @@ function Studyplan(props) {
         }
     })
 
-
     return (
         <div className='studyplan'>
-            <MindMap nodes={test} connections={test2} />
+            {Mods.length !== 0 && <MindMap nodes={test} connections={test2} />}
             <p>
                 Modules Added
             </p>
