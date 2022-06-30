@@ -10,8 +10,8 @@ const Modules = () => {
         name: '',
         code: '',
         mc: '',
-        prerequisites: [],
-        preclusions: []
+        prereq: [],
+        preclusions: [],
     }])
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Modules = () => {
                 <div className='modules-one'>
                     <h3 className='modules-name'><a onClick={() => {toPage(module)}}>{module.code} {module.name}</a></h3>
                     <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
-                    <p>Prerequisites {module.prerequisites}</p>
+                    <p>Prerequisites <span>{module.prereq}</span></p>
                     <p>Preclusions <span>{module.preclusions}</span></p>
                 </div>
             )}

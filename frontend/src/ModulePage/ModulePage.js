@@ -14,17 +14,17 @@ function ModulePage(props) {
             <h1>
                 {location.state.code} {`\n`}
                 {location.state.name}
-                <p>Computer Science <GoPrimitiveDot /> {location.state.mc} MCs </p>
+                <p>Computer Science <GoPrimitiveDot/> {location.state.mc} MCs </p>
                 <hr style={{ borderColor: 'white', height: '2px', }}/>
                 <p>
                     <g>
-                        Insert Module Details Here
-                        {`\n`}{`\n`}{`\n`}{`\n`}
+                        {location.state.details}
+                        {`\n`}{`\n`}{`\n`}
                         Preclusions:{`\n`}
                         {location.state.preclusions}
-                        {`\n`}{`\n`}{`\n`}{`\n`}
+                        {`\n`}{`\n`}{`\n`}
                         Prerequisites:{`\n`}
-                        {location.state.prerequisites}
+                        {location.state.prereq}
                         {`\n`}{`\n`}
                         <Button 
                             buttonSize='btn--large'

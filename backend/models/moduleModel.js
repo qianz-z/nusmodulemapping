@@ -8,8 +8,9 @@ const moduleSchema = new mongoose.Schema({
     },
     mc: Number,
     // one hop prerequisites
-    prerequisites: [mongoose.SchemaTypes.ObjectId],
+    prereq: [String],
     preclusions: [String],
+    details: [String],
 })
 
 module.exports = mongoose.model("Module", moduleSchema)

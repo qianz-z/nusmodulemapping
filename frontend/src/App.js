@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import ReactSwitch from 'react-switch';
 import './App.css';
 import ModulePage from './ModulePage/ModulePage';
@@ -40,6 +40,16 @@ const App = () => {
   };
 
   const [Mods, setMods] = useState([])
+  useEffect(() => {
+    localStorage.setItem('Mods', JSON.stringify(Mods));
+  }, [Mods]);
+  //const Mods = JSON.parse(localStorage.getItem('Mods'));
+  useEffect(() => {
+    const Mods = JSON.parse(localStorage.getItem('Mods'));
+    if (Mods) {
+     setMods(Mods);
+    }
+  }, []);
 
   const onAdd = (product) => {
     const exist = Mods.find((x) => x.code === product.code);
