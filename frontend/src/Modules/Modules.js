@@ -21,7 +21,7 @@ function Modules(props) {
         }).then(jsonRes => setModules(jsonRes));
     })
     const navigate = useNavigate();
-    const { Mods, onAdd, onRemove } = props;
+    const { Mods, onAdd } = props;
 
     //navigation and transfer of data from main modules page to individual modules page
     const toPage = (module) => {

@@ -7,7 +7,7 @@ import { useLocation } from 'react-router-dom';
 
 function ModulePage(props) {
     const location = useLocation();
-    const { Mods, onAdd, onRemove } = props;
+    const { Mods, onAdd } = props;
 
     return (
         <div className='module-container'>

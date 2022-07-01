@@ -46,13 +46,15 @@ const App = () => {
       localStorage.setItem('Mods', JSON.stringify(Mods));
   }, [Mods]);
 
+  
   const onAdd = (product) => {
     const exist = Mods.find((x) => x.code === product.code);
     if (!exist) {
       setMods([...Mods, { ...product}]);
     }
-    else {
-      onRemove(product);
+    //if module has already been previous added, remove it 
+    else { 
+      setMods(Mods.filter((x) => x.code !== product.code)); //same function as onRemove
     }
   }
 
