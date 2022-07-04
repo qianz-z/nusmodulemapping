@@ -5,8 +5,8 @@
     height: 100vh;
     width: 81%;
     margin-top: -10%;
-    margin-left: 19%;
-
+    margin-left: 24%;
+    
 }
 
 .modules-one{
@@ -17,11 +17,9 @@
 
 .modules-name{
     color: #ff4500;
-    padding-left: 5%;
     cursor: pointer;
 }
 
 p {
-    padding-left: 5%;
 }
 
