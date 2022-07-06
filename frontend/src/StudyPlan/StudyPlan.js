@@ -10,7 +10,7 @@ function Studyplan(props) {
 
     //creation of nodes
     Mods.map((item) => {
-        let y1, y2, y3, y4 = 0;
+        let y1, y2, y3, y4, y5 = 0;
 
         if (item.prereq.length === 0) {
             test.push({ text: item.code, fx: 0, fy: y1 })
@@ -26,9 +26,13 @@ function Studyplan(props) {
                 test.push({ text: item.code, fx: 400, fy: y3 });
                 y3 += 100;
             }
-            else {
+            else if (temp[2] === '3') {
                 test.push({ text: item.code, fx: 600, fy: y4 });
                 y4 += 100;
+            }
+            else {
+                test.push({ text: item.code, fx: 800, fy: y5 });
+                y5 += 100;
             }
         };
     })

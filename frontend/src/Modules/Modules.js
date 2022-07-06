@@ -37,10 +37,11 @@ function Modules(props) {
             }
         }).then(jsonRes => setModules(jsonRes));
     })
-    const navigate = useNavigate();
+    
     const { Mods, onAdd } = props;
 
     //navigation and transfer of data from main modules page to individual modules page
+    const navigate = useNavigate();
     const toPage = (module) => {
         navigate(`/modules/:${module.code}`, { state: module });
     }
@@ -61,8 +62,8 @@ function Modules(props) {
                 <div className='modules-one'>
                     <h3 className='modules-name'><a onClick={() => { toPage(module) }}>{module.code} {module.name}</a></h3>
                     <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
-                    <p>Prerequisites <span>{module.prereq}</span></p>
-                    <p>Preclusions <span>{module.preclusions}</span></p>
+                    {module.prereq.length !== 0 && <p>Prerequisites <span>{module.prereq}</span></p>}
+                    {module.preclusions.length !== 0 && <p>Preclusions <span>{module.preclusions}</span></p>}
                     <p>
                         <Button buttonSize='btn--medium'
                             onClick={() => onAdd(module)}
