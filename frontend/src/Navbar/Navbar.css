@@ -8,6 +8,7 @@
     justify-content: flex-start;
     align-items: center;
     margin: 0;
+
 }
 
 .navbar-header-text{
@@ -30,11 +31,11 @@
     overflow: auto;
     z-index: 999;
     height:auto;
-
 }
 
 .navbar-menu-items{
-    color: #484848;
+    background-color: white;
+
     display: start;
     width: 17%;
     height: 100%;
@@ -42,9 +43,18 @@
     list-style-type: none;
     justify-content: center;
     position: fixed;
-    background-color: white;
     margin: 0;
-}   
+}  
+
+#dark .navbar-menu-items, #dark label, #dark .nav-text a {
+    background-color: #585858;
+    color: white;
+} 
+
+#dark .nav-text a:hover {
+    background-color: #E8E8E8;
+    color: red;
+}
 
 .nav-text{
     display: flex;
@@ -53,7 +63,8 @@
     padding: 3%;
     height: 5%;
     width: 100%;
-    font-size: 1.4vw;}
+    font-size: 1.4vw;
+}
 
 .nav-text a {
     text-decoration: none;
@@ -65,7 +76,8 @@
 }
 
 .nav-text a:hover {
-    background-color: #E8E8E8
+    background-color: #E8E8E8;
+    color: red;
 }
 
 /* between icon and text */

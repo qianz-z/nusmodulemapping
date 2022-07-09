@@ -69,7 +69,7 @@ const App = () => {
     <ThemeContext.Provider value = {{ theme, switchTheme }} >
       <main id={theme}>
         <Router>
-          <Navbar switchTheme = {switchTheme} theme = {theme}/>
+          <Navbar className = "navbar" switchTheme = {switchTheme} theme = {theme}/>
           <Routes>
             <Route exact path = "/" element = {<Home/>}/>
             <Route exact path = "/modules" element = {<Modules Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>}/>
