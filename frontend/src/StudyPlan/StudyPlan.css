@@ -1,9 +1,11 @@
 .studyplan {
-    height: 100vh;
+    height: auto;
     width: 95%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 4%;
+    margin-left: 24%;
   }
 
   .studyplan > p {

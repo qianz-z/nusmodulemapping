@@ -1,15 +1,20 @@
 .hero-container {
   background: url(/images/img-home.jpg) center center/cover no-repeat; 
   height: 100vh;
-  width: 81%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: right;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
+<<<<<<< HEAD
   margin-top: -10%;
   margin-left: 19%;
+=======
+  margin-left: 18%;
+  margin-top: 3%;
+>>>>>>> e1ec4e37bf75fece359bdae888d549161b3bdf27
 }
 
 .hero-container > h1 {

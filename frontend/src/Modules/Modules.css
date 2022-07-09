@@ -1,10 +1,9 @@
 .modules{
     align-items: center;
     justify-content: center;
-    position: static;
-    height: 100vh;
+    height: auto;
     width: 81%;
-    margin-top: -10%;
+    margin-top: 4%;
     margin-left: 24%;
     
 }
@@ -20,6 +19,4 @@
     cursor: pointer;
 }
 
-p {
-}
 
