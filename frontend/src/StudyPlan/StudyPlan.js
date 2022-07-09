@@ -11,7 +11,6 @@ function Studyplan(props) {
     //creation of nodes
     Mods.map((item) => {
         let y1, y2, y3, y4, y5 = 0;
-
         if (item.prereq.length === 0) {
             test.push({ text: item.code, fx: 0, fy: y1 })
             y1 += 100;

@@ -20,6 +20,11 @@
   margin-left: 15%;
 }
 
+.hero-container > h2 {
+  width: 20%;
+  margin-left: 37%;
+}
+
 .module-name {
   margin-left: 15%;
   min-width: 1vw;
