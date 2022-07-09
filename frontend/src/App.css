@@ -5,10 +5,20 @@
     display: block;
     z-index: -100; /* removing this allows map to move */
     left: 5%;
-    height: 100vh;
+    height: auto;
     width: 100%;
     margin-right: 10%;
     margin-top: -9%;
+}
+
+#dark {
+    background-color: #585858;
+    color: white;
+}
+
+#light {
+    background-color: white;
+    color: black;
 }
 
 #dark .modules{
@@ -40,7 +50,6 @@
     background-color: white;
     color: black;
 }
-
 
 
 .switch{
