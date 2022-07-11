@@ -1,16 +1,3 @@
-.studyplan {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    display: block;
-    z-index: -100; /* removing this allows map to move */
-    left: 5%;
-    height: auto;
-    width: 100%;
-    margin-right: 10%;
-    margin-top: -9%;
-}
-
 #dark {
     background-color: #585858;
     color: white;
@@ -21,38 +8,38 @@
     color: black;
 }
 
-#dark .modules{
+#dark .modules {
     background-color: #585858;
     color: white;
 }
 
-#light .modules{
+#light .modules {
     background-color: white;
     color: black;
 }
 
-#dark .studyplan{
+#dark .studyplan {
     background-color: #585858;
     color: white;
 }
 
-#light .studyplan{
+#light .studyplan {
     background-color: white;
     color: black;
 }
 
-#dark .module-container{
+#dark .module-container {
     background-color: #585858;
     color: white;
 }
 
-#light .module-container{
+#light .module-container {
     background-color: white;
     color: black;
 }
 
 
-.switch{
+.switch {
     margin-left: 85%;
     margin-top: -52%;
     z-index: 9999;

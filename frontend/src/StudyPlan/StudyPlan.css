@@ -1,12 +1,15 @@
 .studyplan {
-    height: auto;
-    width: 95%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4%;
-    margin-left: 15%;
-  }
+  height: auto;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: inherit;
+  display: block;
+  margin-top: 4%;
+  margin-left: 20%;
+  z-index: -1;
+}
 
   .studyplan > p {
     margin-left: 43%;
