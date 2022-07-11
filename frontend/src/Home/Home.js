@@ -4,8 +4,17 @@ import './Home.css';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { useNavigate } from 'react-router-dom';
-import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+
+//function to sort modules in carousel
+const SpotlightModules = (modules, option) => {
+  return modules.filter((modules) => {
+    const majorName = modules.major
+    if (majorName.includes(option)) {
+      return majorName.includes(option);
+    }
+  });
+};
 
 function Home() {
   //fetching modules from backend
@@ -34,25 +43,27 @@ function Home() {
   const options = [
     'Computer Science', 'Information Systems', 'Information Security', 'Computer Engineering', 'Business Analytics'
   ];
-  //<Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select an option" />;
 
-  //function to sort modules in carousel
-  let option = 'Computer Science'
-  function SpotlightModules (option) {
-    const mods = modules.map((module) => {
-      if (module.major.find((x) => x === option)) { //if module's 'major' component has 'major' in option
-        return module;
-      }
-    })
-    console.log(mods);
+  const [option, setOption] = useState('Computer Science');
+  function changeOption(e) {
+    setOption(e.target.value);
   }
+  const Spotlight = SpotlightModules(modules, option)
 
   return (
     <div className='hero-container'>
       <h1>Spotlight Modules</h1>
-      <h2><Dropdown options={options} onClick={SpotlightModules} placeholder="Select an option" /></h2>
+      <h2><select
+        className = 'dropdown'
+        value={option}
+        onChange={changeOption}>
+        {options.map((option) => (
+          <option value={option}>{option}</option>
+        ))}
+      </select>
+      </h2>
       <Carousel showThumbs={false}>
-        {modules.map(module =>
+        {Spotlight.map(module =>
           <div>
             <div className='module-name'>
               <a onClick={() => { toPage(module) }}>
