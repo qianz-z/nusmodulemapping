@@ -12,7 +12,7 @@ function SearchBar({ searchQuery, setSearchQuery }) {
                 placeholder="Search Modules"
                 name="s"
             />
-            <button type="submit">Search</button>
+            {/* <button type="submit">Search</button> */}
         </form>
     )
 }

@@ -64,8 +64,10 @@ function Modules(props) {
                     <div className='modules-one'>
                         <h3 className='modules-name'><a onClick={() => { toPage(module) }}>{module.code} {module.name}</a></h3>
                         <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
-                        {module.prereq.length !== 0 && <p>Prerequisites <span>{module.prereq}</span></p>}
-                        {module.preclusions.length !== 0 && <p>Preclusions <span>{module.preclusions}</span></p>}
+                        {module.prereq.length === 0 && <p>Prerequisites: -</p>}
+                        {module.preclusions.length === 0 && <p>Preclusions: -</p>}
+                        {module.prereq.length !== 0 && <p>Prerequisites: {module.prereq}</p>}
+                        {module.preclusions.length !== 0 && <p>Preclusions: {module.preclusions}</p>}
                         <p>
                             <Button buttonSize='btn--medium'
                                 onClick={() => onAdd(module)}

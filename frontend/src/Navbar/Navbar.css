@@ -43,7 +43,6 @@
     list-style-type: none;
     justify-content: center;
     position: fixed;
-    margin: 0;
 }  
 
 #dark .navbar-menu-items, #dark label, #dark .nav-text a {

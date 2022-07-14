@@ -2,10 +2,9 @@
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 30%;
+    width: 40%;
     margin-top: 4%;
     margin-left: 24%;
-
 }
 
 .modules-one {
@@ -27,8 +26,8 @@
 .side {
     font-size: large;
     text-align: center;
-    margin-left: 80%;
-    margin-top: -90%;
+    margin-left: 80%; 
+    margin-top: -90%; 
     position: fixed;
     border: 2px solid black;
     width: 300px;
