@@ -9,6 +9,13 @@ function ModulePage(props) {
     const location = useLocation();
     const { Mods, onAdd } = props;
 
+    //spacing out array
+    function spaceOut (mod) {
+        return (
+            mod
+        ).reduce((prev, curr) => [prev, ', ', curr]);
+    }
+
     return (
         <div className='module-container'>
             <h1>
@@ -21,10 +28,12 @@ function ModulePage(props) {
                         {location.state.details}
                         {`\n`}{`\n`}{`\n`}
                         Preclusions:{`\n`}
-                        {location.state.preclusions}
+                        {location.state.preclusions.length === 0 && '-'}
+                        {location.state.preclusions.length !== 0 && spaceOut(location.state.preclusions)}
                         {`\n`}{`\n`}{`\n`}
                         Prerequisites:{`\n`}
-                        {location.state.prereq}
+                        {location.state.prereq.length === 0 && '-'}
+                        {location.state.prereq.length !== 0 && spaceOut(location.state.prereq)}
                         {`\n`}{`\n`}
                         <Button
                             buttonSize='btn--large'
