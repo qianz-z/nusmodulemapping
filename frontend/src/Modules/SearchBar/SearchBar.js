@@ -3,7 +3,6 @@ import './SearchBar.css'
 
 function SearchBar({ searchQuery, setSearchQuery }) {
     return (
-        <form action="/" method="get">
             <input
                 value={searchQuery}
                 onInput={e => setSearchQuery(e.target.value)}
@@ -12,8 +11,6 @@ function SearchBar({ searchQuery, setSearchQuery }) {
                 placeholder="Search Modules"
                 name="s"
             />
-            {/* <button type="submit">Search</button> */}
-        </form>
     )
 }
 

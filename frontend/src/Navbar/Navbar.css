@@ -34,8 +34,7 @@
 }
 
 .navbar-menu-items{
-    background-color: white;
-
+    background-color: rgb(255, 255, 255, 0.8);
     display: start;
     width: 17%;
     height: 100%;
@@ -43,6 +42,7 @@
     list-style-type: none;
     justify-content: center;
     position: fixed;
+    margin-top: 0%;
 }  
 
 #dark .navbar-menu-items, #dark label, #dark .nav-text a {

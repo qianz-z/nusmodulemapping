@@ -54,7 +54,7 @@ function Home() {
     <div className='hero-container'>
       <h1>Spotlight Modules</h1>
       <h2><select
-        className = 'dropdown'
+        className='dropdown'
         value={option}
         onChange={changeOption}>
         {options.map((option) => (
@@ -62,18 +62,16 @@ function Home() {
         ))}
       </select>
       </h2>
-      <Carousel showThumbs={false}>
+      <Carousel showThumbs={false} infiniteLoop={true}>
         {Spotlight.map(module =>
-          <div>
-            <div className='module-name'>
-              <a onClick={() => { toPage(module) }}>
-                {module.code} {`\n`}
-                {module.name}
-              </a>
-              <h1>
-                {module.details}
-              </h1>
-            </div>
+          <div className='module-name'>
+            <a onClick={() => { toPage(module) }}>
+              {module.code} {`\n`}
+              {module.name}
+            </a>
+            <h1>
+              {module.details}
+            </h1>
           </div>
         )}
       </Carousel>
