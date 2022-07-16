@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../Components/Button';
 import SearchBar from './SearchBar/SearchBar.js'
 
+
 //function to filter search 
 const filterPosts = (modules, query) => {
     if (!query) {
@@ -37,8 +38,15 @@ function Modules(props) {
             }
         }).then(jsonRes => setModules(jsonRes));
     })
+
+    const { Mods, onAdd, onRemove } = props;
     
-    const { Mods, onAdd } = props;
+    //spacing out array
+    function spaceOut (mod) {
+        return (
+            mod
+        ).reduce((prev, curr) => [prev, ', ', curr]);
+    }
 
     //navigation and transfer of data from main modules page to individual modules page
     const navigate = useNavigate();
@@ -53,17 +61,20 @@ function Modules(props) {
     const filteredPosts = filterPosts(modules, searchQuery);
 
     return (
-        <div className='modules' >
-            <SearchBar
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-            />
-            {filteredPosts.map(module =>
+        <div className='row'>
+            <div className='modules' >
+                <SearchBar
+                    searchQuery={searchQuery}
+                    setSearchQuery={setSearchQuery}
+                />
+                {filteredPosts.map(module =>
                 <div className='modules-one'>
                     <h3 className='modules-name'><a onClick={() => { toPage(module) }}>{module.code} {module.name}</a></h3>
                     <p>Computer Science <GoPrimitiveDot /> {module.mc} MCs</p>
-                    {module.prereq.length !== 0 && <p>Prerequisites <span>{module.prereq}</span></p>}
-                    {module.preclusions.length !== 0 && <p>Preclusions <span>{module.preclusions}</span></p>}
+                    {module.prereq.length === 0 && <p>Prerequisites: -</p>}
+                    {module.preclusions.length === 0 && <p>Preclusions: -</p>}
+                    {module.prereq.length !== 0 && <p>Prerequisites: {spaceOut(module.prereq)} </p>}
+                    {module.preclusions.length !== 0 && <p>Preclusions: {spaceOut(module.preclusions)}</p>}
                     <p>
                         <Button buttonSize='btn--medium'
                             onClick={() => onAdd(module)}
@@ -71,8 +82,21 @@ function Modules(props) {
                             {Mods.find((x) => x.code === module.code) ? "Remove from Study Plan" : "Add to Study Plan"}
                         </Button>
                     </p>
-                </div>
-            )}
+                </div>)}
+            </div>
+            <div className='side'>
+                <h2>Added Modules</h2>
+                <p>
+                    {Mods.length === 0 && <div>No Modules Added</div>}
+                </p>
+                {Mods.map((item) => (
+                    <p key={item.code}>
+                        {item.code}  <button onClick={() => onRemove(item)}>
+                            x
+                        </button>
+                    </p>
+                ))}
+            </div>
         </div>
     )
 }

@@ -49,9 +49,15 @@ function Studyplan(props) {
         }
     })
 
+    const divStyle = {
+        border: '1px solid black',
+        width: 1400,
+    };
+
     return (
         <div className='studyplan'>
-            {Mods.length !== 0 && <MindMap nodes={test} connections={test2} />}
+            <div style={ divStyle }>
+                {Mods.length !== 0 && <MindMap nodes={test} connections={test2} />}</div>
             <p>
                 Modules Added
             </p>

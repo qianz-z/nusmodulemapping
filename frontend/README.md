@@ -23,9 +23,6 @@ npm i react-responsive-carousel
 react-mindmap
 npm i react-mindmap
 
-react-dropdown
-npm i react-dropdown 
-
 cd backend
 npm install dotenv --save
 
