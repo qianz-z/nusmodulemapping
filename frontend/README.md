@@ -28,3 +28,7 @@ npm i react-dropdown
 
 cd backend
 npm install dotenv --save
+
+update netlify
+cd frontend
+npm run build
