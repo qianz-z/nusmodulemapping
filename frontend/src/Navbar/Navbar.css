@@ -46,7 +46,7 @@
 }  
 
 #dark .navbar-menu-items, #dark label, #dark .nav-text a {
-    background-color: #585858;
+    background-color: rgb(88, 88, 88, 0.8);
     color: white;
 } 
 

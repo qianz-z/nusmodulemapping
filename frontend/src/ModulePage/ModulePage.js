@@ -36,7 +36,7 @@ function ModulePage(props) {
                         {location.state.prereq.length !== 0 && spaceOut(location.state.prereq)}
                         {`\n`}{`\n`}
                         <Button
-                            buttonSize='btn--large'
+                            buttonSize='btn--medium'
                             onClick={() => onAdd(location.state)}
                             buttonStyle='btn--primary'>
                             {Mods.find((x) => x.code === location.state.code) ? "Remove from Study Plan" : "Add to Study Plan"}

@@ -48,15 +48,10 @@ function Studyplan(props) {
             }
         }
     })
-
-    const divStyle = {
-        border: '1px solid black',
-        width: 1400,
-    };
-
+    
     return (
         <div className='studyplan'>
-            <div style={ divStyle }>
+            <div className='box'>
                 {Mods.length !== 0 && <MindMap nodes={test} connections={test2} />}</div>
             <p>
                 Modules Added
