@@ -25,3 +25,7 @@ npm i react-mindmap
 
 cd backend
 npm install dotenv --save
+
+update netlify
+cd frontend
+npm run build
