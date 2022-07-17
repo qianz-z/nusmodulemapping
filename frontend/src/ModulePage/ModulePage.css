@@ -23,3 +23,11 @@
   white-space: pre-line;
 }
 
+.errorBox {
+  border: 1px solid red;
+    width: 101.7%;
+    margin-top: 3.5%;
+    margin-left: -2%;
+    text-align: center;
+    font-size: 24px;
+}

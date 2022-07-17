@@ -7,17 +7,27 @@ import { useLocation } from 'react-router-dom';
 
 function ModulePage(props) {
     const location = useLocation();
-    const { Mods, onAdd } = props;
+    const { Mods, onAdd, errorPrint, spaceOut } = props;
 
-    //spacing out array
-    function spaceOut (mod) {
-        return (
-            mod
-        ).reduce((prev, curr) => [prev, ', ', curr]);
-    }
+    //preclusion checker
+    let preclusionsError = []
+    Mods.map((item) => {
+        if (item.preclusions.length !== 0) {
+            for (var i = 0; i < item.preclusions.length; i++) {
+                let temp = item.preclusions[i];
+                let exist = Mods.find((x) => x.code === temp);
+                if (exist) {
+                    preclusionsError.push(temp);
+                }
+            }
+        }
+    })
 
     return (
         <div className='module-container'>
+            <div className='errorBox'>
+                {errorPrint(preclusionsError)}
+            </div>
             <h1>
                 {location.state.code} {`\n`}
                 {location.state.name}
