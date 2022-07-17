@@ -25,9 +25,10 @@ function ModulePage(props) {
 
     return (
         <div className='module-container'>
-            <div className='errorBox'>
-                {errorPrint(preclusionsError)}
-            </div>
+            {preclusionsError.length !== 0 &&
+                <div className='errorBox'>
+                    {errorPrint(preclusionsError)}
+                </div>}
             <h1>
                 {location.state.code} {`\n`}
                 {location.state.name}

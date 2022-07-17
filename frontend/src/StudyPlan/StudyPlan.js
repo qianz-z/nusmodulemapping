@@ -12,25 +12,25 @@ function Studyplan(props) {
     Mods.map((item) => {
         let y1, y2, y3, y4, y5 = 0;
         if (item.prereq.length === 0) {
-            node.push({ text: item.code, fx: 0, fy: y1 })
+            node.push({ text: item.code, fx: 100, fy: y1 })
             y1 += 100;
         }
         else {
             let temp = item.prereq[item.prereq.length - 1];
             if (temp[2] === '1') {
-                node.push({ text: item.code, fx: 200, fy: y2 });
+                node.push({ text: item.code, fx: 300, fy: y2 });
                 y2 += 100;
             }
             else if (temp[2] === '2') {
-                node.push({ text: item.code, fx: 400, fy: y3 });
+                node.push({ text: item.code, fx: 500, fy: y3 });
                 y3 += 100;
             }
             else if (temp[2] === '3') {
-                node.push({ text: item.code, fx: 600, fy: y4 });
+                node.push({ text: item.code, fx: 700, fy: y4 });
                 y4 += 100;
             }
             else {
-                node.push({ text: item.code, fx: 800, fy: y5 });
+                node.push({ text: item.code, fx: 900, fy: y5 });
                 y5 += 100;
             }
         };
@@ -48,11 +48,10 @@ function Studyplan(props) {
             }
         }
     })
-    
+
     return (
         <div className='studyplan'>
-            <div className='box'>
-                {Mods.length !== 0 && <MindMap nodes={node} connections={cons} />}</div>
+            {Mods.length !== 0 && <div className='box'> <MindMap nodes={node} connections={cons} /></div>}
             <p>
                 Modules Added
             </p>

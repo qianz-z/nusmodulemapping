@@ -37,7 +37,7 @@ function Modules(props) {
                 return res.json()
             }
         }).then(jsonRes => setModules(jsonRes));
-    })
+    }, [])
 
     const { Mods, onAdd, onRemove, errorPrint, spaceOut } = props;
 
