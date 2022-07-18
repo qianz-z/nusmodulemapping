@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProfPage.css'
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import {BsFillEyeFill, BsFillEyeSlashFill} from "react-icons/bs";
@@ -11,6 +11,9 @@ export default class ProfPage extends React.Component{
             secureTextEntry: true,
             iconName: <BsFillEyeFill/>,
         }
+        this.state = {password: ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     onIconPress = () => {
@@ -21,7 +24,21 @@ export default class ProfPage extends React.Component{
         });
     }
 
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    }
+    handleSubmit(event) {
+        if (this.state.value === "professor"){
+            alert('Logged in');
+        }
+        else{
+            alert('Wrong password')
+        }
+        event.preventDefault();
+    }
+
     render(){
+        
         return(
             <div className = "pw-box">
                 <span>
@@ -31,12 +48,13 @@ export default class ProfPage extends React.Component{
                 </span>
                 <span>
                     <View style={{ borderBottomWidth: 1, flexDirection: "row"}}>
-                        <TextInput style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry}/>
+                        <TextInput style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry} defaultValue= {this.state.password} onChange={this.handleChange}/>
                         <TouchableOpacity onPress = {this.onIconPress}>
                             <BsFillEyeFill name = {this.state.iconName}/>
                         </TouchableOpacity>
                     </View>
                 </span>
+                <button onClick={this.handleSubmit}>Submit</button>
             
             </div>
             
