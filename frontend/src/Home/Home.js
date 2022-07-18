@@ -39,7 +39,7 @@ function Home() {
   //navigation and transfer of data from home page to individual modules page
   const navigate = useNavigate();
   const toPage = (module) => {
-    navigate(`/modules/:${module.code}`, { state: module });
+    navigate(`/modules/${module.code}`, { state: module });
   }
 
   //dropdown menu 
