@@ -27,8 +27,8 @@
     font-size: large;
     text-align: center;
     margin-left: 70%; 
-    margin-top: -250%; 
-    position: absolute;
+    margin-top: -245%; 
+    position: fixed;
     border: 2px solid black;
     width: 300px;
     border-radius: 5px;
