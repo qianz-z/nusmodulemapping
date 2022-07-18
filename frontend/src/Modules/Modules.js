@@ -15,10 +15,7 @@ const filterPosts = (modules, query) => {
     return modules.filter((modules) => {
         const postName = modules.name.toLowerCase();
         const modName = modules.code.toLowerCase();
-        if (postName.includes(query)) {
-            return postName.includes(query);
-        }
-        return modName.includes(query);
+        return (postName.includes(query) + modName.includes(query));
     });
 };
 
@@ -44,7 +41,7 @@ function Modules(props) {
     //navigation and transfer of data from main modules page to individual modules page
     const navigate = useNavigate();
     const toPage = (module) => {
-        navigate(`/modules/:${module.code}`, { state: module });
+        navigate(`/modules/${module.code}`, { state: module });
     }
 
     //searchbar things
