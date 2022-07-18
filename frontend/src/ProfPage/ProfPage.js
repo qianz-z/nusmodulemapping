@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProfPage.css'
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import {BsFillEyeFill, BsFillEyeSlashFill} from "react-icons/bs";
-import 'react-nice-input-password/dist/react-nice-input-password.css';
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default class ProfPage extends React.Component{
     constructor(props) {
@@ -10,8 +10,9 @@ export default class ProfPage extends React.Component{
         this.state = {
             secureTextEntry: true,
             iconName: <BsFillEyeFill/>,
+            redirect: false,
+            password: '',
         }
-        this.state = {password: ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -29,6 +30,7 @@ export default class ProfPage extends React.Component{
     }
     handleSubmit(event) {
         if (this.state.value === "professor"){
+            this.setState({ redirect: true, })
             alert('Logged in');
         }
         else{
@@ -38,6 +40,9 @@ export default class ProfPage extends React.Component{
     }
 
     render(){
+        if (this.state.redirect){
+            return <Navigate to="/profonly" replace={true} />
+        }
         
         return(
             <div className = "pw-box">
@@ -54,7 +59,8 @@ export default class ProfPage extends React.Component{
                         </TouchableOpacity>
                     </View>
                 </span>
-                <button onClick={this.handleSubmit}>Submit</button>
+                <button onClick={this.handleSubmit} >Submit</button>
+                {/* {this.handleSubmit && (<Navigate to="/profonly" replace={true} />)} */}
             
             </div>
             

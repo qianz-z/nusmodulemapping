@@ -102,7 +102,7 @@ const App = () => {
             <Route exact path="/modules" element={<Modules Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
             <Route exact path="/studyplan" element={<StudyPlan Mods={Mods} onRemove={onRemove} errorPrint={errorPrint} />} />
             <Route exact path="/modules/:code" element={<ModulePage Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
-            <Route exact path="/profpage" element={<ProfPage/>} />
+            <Route exact path="/prof" element={<ProfPage/>} />
           </Routes>
         </Router>
       </main>
