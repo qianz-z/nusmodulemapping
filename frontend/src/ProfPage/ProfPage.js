@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProfPage.css'
-import { View, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import {BsFillEyeFill, BsFillEyeSlashFill} from "react-icons/bs";
 import 'react-nice-input-password/dist/react-nice-input-password.css';
 
@@ -23,13 +23,22 @@ export default class ProfPage extends React.Component{
 
     render(){
         return(
-            <View style={{ borderBottomWidth: 1, flexDirection: "row"}}>
-                <TextInput className = "pw-box" style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry}/>
-                
-                <TouchableOpacity onPress = {this.onIconPress}>
-                    <BsFillEyeFill name = {this.state.iconName}/>
-                </TouchableOpacity>
-            </View>
+            <div className = "pw-box">
+                <span>
+                    <Text>This page is for Professors only! {'\n'}
+                        Please key in the password for administration rights. 
+                    </Text>
+                </span>
+                <span>
+                    <View style={{ borderBottomWidth: 1, flexDirection: "row"}}>
+                        <TextInput style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry}/>
+                        <TouchableOpacity onPress = {this.onIconPress}>
+                            <BsFillEyeFill name = {this.state.iconName}/>
+                        </TouchableOpacity>
+                    </View>
+                </span>
+            
+            </div>
             
         )
     }

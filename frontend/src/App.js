@@ -1,13 +1,13 @@
+import './App.css';
 import React from 'react';
 import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
+import ModulePage from './ModulePage/ModulePage';
 import ProfPage from './ProfPage/ProfPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
-import './App.css';
-import ModulePage from './ModulePage/ModulePage';
 
 export const ThemeContext = createContext(null);
 
@@ -53,14 +53,8 @@ const App = () => {
     if (!exist) {
       setMods([...Mods, { ...product }]);
     }
-<<<<<<< HEAD
-    
-    // if module has already been previous added, remove it 
-    else { 
-=======
     //if module has already been previous added, remove it 
     else {
->>>>>>> 2f148dbbd4cf81c01d617b69e2911b972529cd51
       setMods(Mods.filter((x) => x.code !== product.code)); //same function as onRemove
     }
   }
@@ -104,18 +98,11 @@ const App = () => {
         <Router>
           <Navbar className="navbar" switchTheme={switchTheme} theme={theme} />
           <Routes>
-<<<<<<< HEAD
-            <Route exact path = "/" element = {<Home/>}/>
-            <Route exact path = "/modules" element = {<Modules Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>}/>
-            <Route exact path = "/studyplan" element = {<StudyPlan Mods={Mods} onRemove = {onRemove}/>}/>
-            <Route exact path = "/modules/:code" element = {<ModulePage Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>} />
-            <Route exact path = "/prof" element = {<ProfPage/>} />
-=======
             <Route exact path="/" element={<Home />} />
             <Route exact path="/modules" element={<Modules Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
             <Route exact path="/studyplan" element={<StudyPlan Mods={Mods} onRemove={onRemove} errorPrint={errorPrint} />} />
             <Route exact path="/modules/:code" element={<ModulePage Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
->>>>>>> 2f148dbbd4cf81c01d617b69e2911b972529cd51
+            <Route exact path="/profpage" element={<ProfPage/>} />
           </Routes>
         </Router>
       </main>

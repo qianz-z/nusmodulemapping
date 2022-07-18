@@ -1,6 +1,8 @@
 .pw-box{
-    margin-left: 20%;
-    font-size: 64px;
-    margin-top: 20%;
-    
+    margin-left: 10%;
+    margin-top: 3%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    height: auto;
 }
