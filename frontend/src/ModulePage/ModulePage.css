@@ -3,7 +3,7 @@
   width: 80%;
   justify-content: top;
   padding-left: 20%;
-  margin-top: 2.6%;
+  margin-top: 3.5%;
 }
 
 .module-container>h1 {
@@ -17,9 +17,17 @@
   text-align: left;
 }
 
-.module-container>h1>p>g {
+.module-container>h1>h2 {
   font-size: 20px;
   text-align: left;
   white-space: pre-line;
 }
 
+.errorBox {
+  border: 1px solid red;
+    width: 101.7%;
+    margin-top: 3.5%;
+    margin-left: -2%;
+    text-align: center;
+    font-size: 24px;
+}

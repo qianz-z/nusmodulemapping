@@ -1,14 +1,13 @@
 .studyplan {
-  height: 94vh;
   width: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: inherit;
   display: block;
-  margin-top: 2.6%;
+  margin-top: 3.5%;
   margin-left: 20%;
-  z-index: -1;
+  padding-top: 1%;
 }
 
   .studyplan > p {
@@ -27,7 +26,9 @@
     
   }
 
-  .side {
-    border: 2px solid black;
+  .box {
+    border: 1px solid black;
+    width: 85%;
   }
+
   

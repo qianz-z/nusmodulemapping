@@ -16,10 +16,10 @@ const App = () => {
   const body = document.body;
   let theme;
 
-  if (localStorage){
+  if (localStorage) {
     theme = localStorage.getItem("theme")
   }
-  if (theme === "light" || theme === "dark"){
+  if (theme === "light" || theme === "dark") {
     body.classList.add(theme);
   } else {
     body.classList.add("light");
@@ -29,7 +29,7 @@ const App = () => {
 
   const switchTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
-    if (theme === "dark"){
+    if (theme === "dark") {
       body.classList.replace("dark", "light");
       localStorage.setItem("theme", "light");
       theme = "light";
@@ -44,18 +44,23 @@ const App = () => {
   const [Mods, setMods] = useState(JSON.parse(localStorage.getItem('Mods')) ?? [])  
 
   useEffect(() => {
-      localStorage.setItem('Mods', JSON.stringify(Mods));
+    localStorage.setItem('Mods', JSON.stringify(Mods));
   }, [Mods]);
 
-  
+
   const onAdd = (product) => {
     const exist = Mods.find((x) => x.code === product.code);
     if (!exist) {
-      setMods([...Mods, { ...product}]);
+      setMods([...Mods, { ...product }]);
     }
+<<<<<<< HEAD
     
     // if module has already been previous added, remove it 
     else { 
+=======
+    //if module has already been previous added, remove it 
+    else {
+>>>>>>> 2f148dbbd4cf81c01d617b69e2911b972529cd51
       setMods(Mods.filter((x) => x.code !== product.code)); //same function as onRemove
     }
   }
@@ -67,20 +72,53 @@ const App = () => {
     }
   }
 
+  //function to print error message
+  const errorPrint = (item) => {
+    if (item.length === 2) { //if only 1 precludes (item.length = 2 as it includes both the actual mod and the preclusion)
+      return (item[0] + ' is a preclusion of ' + item[1] + '.')
+    }
+    else { //if plural
+      let output = [];
+      const errorMods = [...new Set(item)];
+      for (var i = 0; i < errorMods.length; i++) {
+        output += errorMods[i];
+        if (i !== errorMods.length - 1) {
+          output += ', ';
+        }
+      }
+      output += ' are preclusions of one another.';
+      return output;
+    }
+  }
+
+  //spacing out array
+  function spaceOut(mod) {
+    return (
+      mod
+    ).reduce((prev, curr) => [prev, ', ', curr]);
+  }
+
   return (
-    <ThemeContext.Provider value = {{ theme, switchTheme }} >
+    <ThemeContext.Provider value={{ theme, switchTheme }} >
       <main id={theme}>
         <Router>
-          <Navbar className = "navbar" switchTheme = {switchTheme} theme = {theme}/>
+          <Navbar className="navbar" switchTheme={switchTheme} theme={theme} />
           <Routes>
+<<<<<<< HEAD
             <Route exact path = "/" element = {<Home/>}/>
             <Route exact path = "/modules" element = {<Modules Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>}/>
             <Route exact path = "/studyplan" element = {<StudyPlan Mods={Mods} onRemove = {onRemove}/>}/>
             <Route exact path = "/modules/:code" element = {<ModulePage Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>} />
             <Route exact path = "/prof" element = {<ProfPage/>} />
+=======
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/modules" element={<Modules Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
+            <Route exact path="/studyplan" element={<StudyPlan Mods={Mods} onRemove={onRemove} errorPrint={errorPrint} />} />
+            <Route exact path="/modules/:code" element={<ModulePage Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
+>>>>>>> 2f148dbbd4cf81c01d617b69e2911b972529cd51
           </Routes>
         </Router>
-        </main> 
+      </main>
     </ThemeContext.Provider>
   );
 }
