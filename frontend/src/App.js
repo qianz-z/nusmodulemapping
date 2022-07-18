@@ -3,6 +3,7 @@ import Navbar from './Navbar/Navbar';
 import Home from './Home/Home';
 import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
+import ProfPage from './ProfPage/ProfPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
 import './App.css';
@@ -40,7 +41,7 @@ const App = () => {
   };
 
   //Passing data of Mods, Add/Remove Mods from study plan
-  const [Mods, setMods] = useState(JSON.parse(localStorage.getItem('Mods')) ?? [])
+  const [Mods, setMods] = useState(JSON.parse(localStorage.getItem('Mods')) ?? [])  
 
   useEffect(() => {
       localStorage.setItem('Mods', JSON.stringify(Mods));
@@ -52,7 +53,8 @@ const App = () => {
     if (!exist) {
       setMods([...Mods, { ...product}]);
     }
-    //if module has already been previous added, remove it 
+    
+    // if module has already been previous added, remove it 
     else { 
       setMods(Mods.filter((x) => x.code !== product.code)); //same function as onRemove
     }
@@ -75,6 +77,7 @@ const App = () => {
             <Route exact path = "/modules" element = {<Modules Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>}/>
             <Route exact path = "/studyplan" element = {<StudyPlan Mods={Mods} onRemove = {onRemove}/>}/>
             <Route exact path = "/modules/:code" element = {<ModulePage Mods={Mods} onRemove = {onRemove} onAdd = {onAdd}/>} />
+            <Route exact path = "/prof" element = {<ProfPage/>} />
           </Routes>
         </Router>
         </main> 

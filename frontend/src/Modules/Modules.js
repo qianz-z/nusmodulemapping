@@ -57,8 +57,8 @@ function Modules(props) {
     //searchbar things
     const { search } = window.location;
     const query = new URLSearchParams(search).get('s');
-    const [searchQuery, setSearchQuery] = useState(query || '');
     const filteredPosts = filterPosts(modules, searchQuery);
+    const [searchQuery, setSearchQuery] = useState(query || ''); // search as you type
 
     return (
         <div className='row'>

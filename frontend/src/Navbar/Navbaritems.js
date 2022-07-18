@@ -14,4 +14,10 @@ export const Navbaritems = [
         icon: <BsIcons.BsCalendar4 />,
         cName: 'nav-text'
     },
+    {
+        title: 'Professors',
+        path: '/prof',
+        icon: <BsIcons.BsPersonFill />,
+        cName: 'nav-text'
+    },
 ]

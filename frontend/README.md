@@ -26,6 +26,10 @@ npm i react-mindmap
 cd backend
 npm install dotenv --save
 
+password
+npm install react-native-web
+npm install @expo/vector-icons --save
+
 update netlify
 cd frontend
 npm run build
