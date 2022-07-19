@@ -6,6 +6,7 @@ import Modules from './Modules/Modules';
 import StudyPlan from './StudyPlan/StudyPlan';
 import ModulePage from './ModulePage/ModulePage';
 import ProfPage from './ProfPage/ProfPage';
+import ProfOnlyPage from './ProfPage/ProfOnlyPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
 
@@ -103,6 +104,7 @@ const App = () => {
             <Route exact path="/studyplan" element={<StudyPlan Mods={Mods} onRemove={onRemove} errorPrint={errorPrint} />} />
             <Route exact path="/modules/:code" element={<ModulePage Mods={Mods} onRemove={onRemove} onAdd={onAdd} errorPrint={errorPrint} spaceOut={spaceOut}/>} />
             <Route exact path="/prof" element={<ProfPage/>} />
+            <Route exact path="/profonly" element={<ProfOnlyPage/>} />
           </Routes>
         </Router>
       </main>

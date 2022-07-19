@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProfPage.css'
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
 import {BsFillEyeFill, BsFillEyeSlashFill} from "react-icons/bs";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export default class ProfPage extends React.Component{
     constructor(props) {
@@ -32,6 +32,7 @@ export default class ProfPage extends React.Component{
         if (this.state.value === "professor"){
             this.setState({ redirect: true, })
             alert('Logged in');
+            
         }
         else{
             alert('Wrong password')
@@ -46,22 +47,18 @@ export default class ProfPage extends React.Component{
         
         return(
             <div className = "pw-box">
-                <span>
                     <Text>This page is for Professors only! {'\n'}
                         Please key in the password for administration rights. 
                     </Text>
-                </span>
-                <span>
+
                     <View style={{ borderBottomWidth: 1, flexDirection: "row"}}>
                         <TextInput style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry} defaultValue= {this.state.password} onChange={this.handleChange}/>
                         <TouchableOpacity onPress = {this.onIconPress}>
                             <BsFillEyeFill name = {this.state.iconName}/>
                         </TouchableOpacity>
                     </View>
-                </span>
-                <button onClick={this.handleSubmit} >Submit</button>
-                {/* {this.handleSubmit && (<Navigate to="/profonly" replace={true} />)} */}
-            
+
+                <button onClick={this.handleSubmit} >Submit</button>            
             </div>
             
         )
