@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import './ProfOnlyPage.css'
+import axios from "axios"
 
 const initialValues = {
-    module_name: "",
-    module_code: "",
-    module_desc: "",
-    module_prereq: "",
-    module_preclu: "",
+  name: "",
+  code: "",
+  mc: "",
+  prereq: "",
+  preclusions: "",
+  details: "",
   };
 
 export default function ProfOnlyPage() {
@@ -22,54 +24,71 @@ export default function ProfOnlyPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const newModule = {
+      name: values.name,
+      code: values.code,
+      mc: values.mc,
+      prereq: values.prereq,
+      preclusions: values.preclusions,
+      details: values.details
+    };;
+    axios.post('http://localhost:3001/profonly', newModule)
     console.log(values)
-    // this.setState({ msg: 'submitted' })
   };
 
   return (
         <form  onSubmit = {handleSubmit} className = "form">
             <label>Module Name: </label>
             <input
-            value={values.module_name}
+            value={values.name}
             onChange={handleInputChange}
             label="Module Name"
-            name="module_name"
+            name="name"
             />
             <br/>
 
             <label>Module Code: </label>
             <input
-            value={values.module_code}
+            value={values.code}
             onChange={handleInputChange}
             label=">Module Code"
-            name="module_code"
+            name="code"
             />
             <br/>
 
-            <label>Module Description: </label>
-            <textarea
-            value={values.module_desc}
+            <label>Module Credits: </label>
+            <input
+            value={values.mc}
             onChange={handleInputChange}
-            label="Module Description"
-            name="module_desc"
+            label="Module Credits"
+            name="mc"
             />
             <br/>
 
             <label>Module Prerequisites: </label>
             <input
-            value={values.module_prereq}
+            value={values.prereq}
             onChange={handleInputChange}
             label="Module Prerequisites"
-            name="module_prereq"
+            name="prereq"
             />
             <br/>
 
             <label>Module Preclusions: </label>
             <input
-            value={values.module_preclu}
+            value={values.preclusions}
             onChange={handleInputChange}
             label="Module Preclusions"
-            name="module_preclu"
+            name="preclusions"
+            />
+            <br/>
+
+            <label>Module Details: </label>
+            <textarea
+            value={values.details}
+            onChange={handleInputChange}
+            label="Module Details"
+            name="details"
             />
             <br/>
 
@@ -77,70 +96,3 @@ export default function ProfOnlyPage() {
         </form>
   );
 }
-
-
-// export default class ProfOnlyPage extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         module_name: '',
-//         module_code: '',
-//         module_desc: '',
-//         module_prereq: '',
-//         module_preclu: '',
-//     };
-  
-//       this.handleChange = this.handleChange.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//     }
-  
-//     handleChange(event) {
-//       this.setState({
-//         module_name: event.target.module_name,
-//         module_code: event.target.module_code,
-//         module_desc: event.target.module_desc,
-//         module_prereq: event.target.module_prereq,
-//         module_preclu: event.target.module_preclu,
-//     });
-//     }
-  
-//     handleSubmit(event) {
-//       alert('A name was submitted: ' + this.state.module_name + + this.state.module_code +
-//       + this.state.module_desc +
-//       + this.state.module_prereq + this.state.module_preclu );
-//       event.preventDefault();
-//     }
-  
-//     render() {
-//       return (
-//         <form className = "form" onSubmit={this.handleSubmit}>
-//             <label> Module Name:
-//                 <input type="text" value={this.state.module_name} onChange={this.handleChange} />
-//             </label>
-//                 <br/>
-
-//             <label> Module Code:
-//                 <input type="text" value={this.state.module_code} onChange={this.handleChange} />
-//             </label>
-//             <br/>
-
-//             <label> Description:
-//                 <textarea value={this.state.module_desc} onChange={this.handleChange} />
-//             </label>
-//             <br/>
-
-//             <label> Prerequisites:
-//                 <input type="text" value={this.state.module_prereq} onChange={this.handleChange} /> 
-//             </label>
-//                 <br/>
-
-//             <label> Preclusions:
-//                 <input type="text" value={this.state.module_preclu} onChange={this.handleChange} />
-//             </label>
-//             <br/>
-
-//             <input type="submit" value="Submit" />
-//         </form>
-//       );
-//     }
-//   }

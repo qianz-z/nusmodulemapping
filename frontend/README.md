@@ -12,6 +12,7 @@ mkdir routes models
 npm init
 npm i express mongoose cors
 npm install -g nodemon
+npm i axios
 nodemon server.js
 
 nodemon server.js
