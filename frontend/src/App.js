@@ -7,7 +7,7 @@ import StudyPlan from './StudyPlan/StudyPlan';
 import ModulePage from './ModulePage/ModulePage';
 import ProfPage from './ProfPage/ProfPage';
 import ProfOnlyPage from './ProfPage/ProfOnlyPage';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { createContext, useState, useEffect } from 'react';
 
 export const ThemeContext = createContext(null);

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProfPage.css'
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import {BsFillEyeFill, BsFillEyeSlashFill} from "react-icons/bs";
 import { Navigate } from "react-router-dom";
 
