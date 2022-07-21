@@ -7,14 +7,13 @@ function Studyplan(props) {
 
     let cons = [];
     let node = [];
-
+    let y1 = 100;
+    let y2 = 100;
+    let y3 = 100;
+    let y4 = 100;
+    let y5 = 100;
     //creation of nodes
     Mods.map((item) => {
-        let y1 = 100;
-        let y2 = 100;
-        let y3 = 100;
-        let y4 = 100;
-        let y5 = 100;
         if (item.prereq.length === 0) {
             node.push({ text: item.code, fx: 100, fy: y1, url: "#/modules/" + item.code, category: "" })
             y1 += 100;
