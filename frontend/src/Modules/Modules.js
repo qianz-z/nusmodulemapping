@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../Components/Button';
 import SearchBar from './SearchBar/SearchBar.js'
 
-
 //function to filter search 
 const filterPosts = (modules, query) => {
     if (!query) {
@@ -41,15 +40,15 @@ function Modules(props) {
     //navigation and transfer of data from main modules page to individual modules page
     const navigate = useNavigate();
     const toPage = (module) => {
-        navigate(`/modules/${module.code}`, { state: module });
+        navigate(`/modules/${module.code}`);
     }
 
     //searchbar things
     const { search } = window.location;
     const query = new URLSearchParams(search).get('s');
-    const filteredPosts = filterPosts(modules, searchQuery);
     const [searchQuery, setSearchQuery] = useState(query || ''); // search as you type
-
+    const filteredPosts = filterPosts(modules, searchQuery);
+    
     //preclusion checker
     let preclusionsError = []
     Mods.map((item) => {
