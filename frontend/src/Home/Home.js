@@ -8,12 +8,10 @@ import 'react-dropdown/style.css';
 
 //function to sort modules in carousel
 const SpotlightModules = (modules, option) => {
-  let newDate = new Date();
-  let date = newDate.getDate() / 32;
   modules.sort(() => Math.random() - 0.5);
   return modules.filter((modules) => {
-    const majorName = modules.major
-    if (majorName.includes(option)) {
+    const majorName = modules.major;
+    if (majorName) {
       return majorName.includes(option);
     }
   });
@@ -39,7 +37,7 @@ function Home() {
   //navigation and transfer of data from home page to individual modules page
   const navigate = useNavigate();
   const toPage = (module) => {
-    navigate(`/modules/${module.code}`, { state: module });
+    navigate(`/modules/${module.code}`);
   }
 
   //dropdown menu 
@@ -66,7 +64,7 @@ function Home() {
       </select>
       </h2>
       <Carousel showThumbs={false} infiniteLoop={false}>
-        {Spotlight.splice(0,3).map(module =>
+        {Spotlight.splice(0, 3).map(module =>
           <div className='module-name'>
             <a onClick={() => { toPage(module) }}>
               {module.code} {`\n`}
