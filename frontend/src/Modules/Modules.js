@@ -51,17 +51,17 @@ function Modules(props) {
     
     //preclusion checker
     let preclusionsError = []
-    // Mods.map((item) => {
-    //     if (item.preclusions.length !== 0) {
-    //         for (var i = 0; i < item.preclusions.length; i++) {
-    //             let temp = item.preclusions[i];
-    //             let exist = Mods.find((x) => x.code === temp);
-    //             if (exist) {
-    //                 preclusionsError.push(temp);
-    //             }
-    //         }
-    //     }
-    // })
+    Mods.map((item) => {
+        if (item.preclusions.length !== 0) {
+            for (var i = 0; i < item.preclusions.length; i++) {
+                let temp = item.preclusions[i];
+                let exist = Mods.find((x) => x.code === temp);
+                if (exist) {
+                    preclusionsError.push(temp);
+                }
+            }
+        }
+    })
 
     return (
         <div className='row'>
