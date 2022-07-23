@@ -46,12 +46,12 @@ export default class ProfPage extends React.Component{
         }
         
         return(
-            <div className = "pw-box">
-                    <Text>This page is for Professors only! {'\n'}
+            <div className='container'>
+                    <Text className="pw-text">This page is for Professors only! {'\n'}
                         Please key in the password for administration rights. 
                     </Text>
 
-                    <View style={{ borderBottomWidth: 1, flexDirection: "row"}}>
+                    <View style={{ borderBottomWidth: 1, flexDirection: "row"}} className = "pw-box">
                         <TextInput style = {{flex: 1}} secureTextEntry={this.state.secureTextEntry} defaultValue= {this.state.password} onChange={this.handleChange}/>
                         <TouchableOpacity onPress = {this.onIconPress}>
                             <BsFillEyeFill name = {this.state.iconName}/>
@@ -59,8 +59,9 @@ export default class ProfPage extends React.Component{
                     </View>
 
                 <button onClick={this.handleSubmit} >Submit</button>            
-            </div>
-            
+
+                </div>
+
         )
     }
 }

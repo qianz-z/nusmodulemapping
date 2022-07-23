@@ -1,8 +1,5 @@
 .form{
-    margin-top: 20%;
-    margin-left: 20%;
-}
-
-span{
-    margin-top: 10%;
+    margin-top: 60px;
+    margin-left: clamp(150px, 24%, 24%);
+    height:90vh;
 }

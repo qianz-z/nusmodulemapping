@@ -1,6 +1,7 @@
 body{
     min-width: '80%';
     min-height: 20;
+    position: relative;
 }
 
 #dark {
@@ -49,6 +50,16 @@ body{
 }
 
 #light .profpage {
+    background-color: white;
+    color: black;
+}
+
+#dark .profonlypage {
+    background-color: #585858;
+    color: white;
+}
+
+#light .profonlypage {
     background-color: white;
     color: black;
 }
