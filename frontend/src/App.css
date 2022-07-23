@@ -1,7 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-
+body{
+    min-width: '80%';
+    min-height: 20;
 }
 
 #dark {
@@ -62,12 +61,6 @@ body {
     position: absolute;
 }
 
-/*
-#light .switch label{
-    color: black;
-}
+/* @media only screen and (min-height: 1024px) {
 
-#dark .switch label{
-    color: white;
-}
-*/
+} */
