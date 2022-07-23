@@ -42,6 +42,7 @@ export default function ProfOnlyPage() {
       preclusions: "",
       details: "",
     })
+    alert("Added to database!")
   };
 
   return (
