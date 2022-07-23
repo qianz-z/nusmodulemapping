@@ -34,6 +34,14 @@ export default function ProfOnlyPage() {
     };;
     axios.post('http://localhost:3001/profonly', newModule)
     console.log(values)
+    setValues({
+      name: "",
+      code: "",
+      mc: "",
+      prereq: "",
+      preclusions: "",
+      details: "",
+    })
   };
 
   return (

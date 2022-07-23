@@ -23,6 +23,7 @@
 .navbar-header-text a{
     color: #ff4500;
     text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .navbar-menu{
@@ -46,6 +47,7 @@
     width: 20%;
     padding: 2%;
     list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }  
 
 #dark .navbar-menu-items, #dark label, #dark .nav-text a {

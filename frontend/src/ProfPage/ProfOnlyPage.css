@@ -2,4 +2,9 @@
     margin-top: 60px;
     margin-left: clamp(150px, 24%, 24%);
     height:90vh;
+    box-sizing: border-box;
+    /* text-align: center; */
+    text-decoration: dashed;
+    padding: 2%;
+    display: block;
 }
