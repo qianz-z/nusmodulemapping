@@ -12,6 +12,7 @@ router.route("/profonly").post((req, res) => {
     const mc = req.body.mc;
     const prereq = req.body.prereq;
     const preclusions = req.body.module_preclu;
+    const major = req.body.major;
     const details = req.body.details;
 
     const newModule = new Module({
@@ -20,6 +21,7 @@ router.route("/profonly").post((req, res) => {
         mc,
         prereq,
         preclusions,
+        major,
         details
     });
 

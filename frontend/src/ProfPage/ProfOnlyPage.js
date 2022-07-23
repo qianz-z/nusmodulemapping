@@ -8,6 +8,7 @@ const initialValues = {
   mc: "",
   prereq: [],
   preclusions: [],
+  major:  [],
   details: "",
   };
 
@@ -30,6 +31,7 @@ export default function ProfOnlyPage() {
       mc: values.mc,
       prereq: values.prereq.split(","),
       preclusions: values.preclusions.split(","),
+      major: values.major.split(","),
       details: values.details
     };;
     axios.post('http://localhost:3001/profonly', newModule)
@@ -40,6 +42,7 @@ export default function ProfOnlyPage() {
       mc: "",
       prereq: "",
       preclusions: "",
+      major:"",
       details: "",
     })
     alert("Added to database!")
@@ -56,6 +59,7 @@ export default function ProfOnlyPage() {
           <span className='example'>Module Credits: 4</span>
           <span className='example'>Module Prerequisites: </span>
           <span className='example'>Module Preclusions: MA1100,CS1231S</span>
+          <span className='example'>Major: Computer Science, Computer Engineer</span>
           <span className='example'>Module Details: This module introduces mathematical tools required in the study of computer science.</span>
         </p>
       </div>
@@ -103,6 +107,15 @@ export default function ProfOnlyPage() {
             onChange={handleInputChange}
             label="Module Preclusions"
             name="preclusions"
+            />
+            <br/>
+
+            <label>Major: </label>
+            <input
+            value={values.major}
+            onChange={handleInputChange}
+            label="Major"
+            name="major"
             />
             <br/>
 
