@@ -1,6 +1,7 @@
 .container{
     margin-top: 60px;
     margin-left: clamp(150px, 24%, 24%);
+    margin-right: 50%;
     height:90vh;
 }
 

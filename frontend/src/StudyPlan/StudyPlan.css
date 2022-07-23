@@ -5,9 +5,8 @@
   align-items: center;
   position: inherit;
   display: block;
-  margin-top: 3.5%;
   margin-left: 20%;
-  padding-top: 1%;
+  top: 45px;
 }
 
   .studyplan > p {

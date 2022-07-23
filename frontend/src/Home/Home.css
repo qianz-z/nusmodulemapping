@@ -8,15 +8,16 @@
   align-items: right;
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
   object-fit: contain;
-  margin-top: 3.5%; 
+  top: 45px;
 }
 
 .hero-container > h1 {
   text-align: relative;
   color: #fff;
   font-size: 6vw;
-  margin-top: -5%; 
+  top: 45px;
   margin-left: 30%;
+  
 }
 
 .hero-container > h2 {
