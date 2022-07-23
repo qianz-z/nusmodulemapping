@@ -59,7 +59,7 @@ export default function ProfOnlyPage() {
           <span className='example'>Module Credits: 4</span>
           <span className='example'>Module Prerequisites: </span>
           <span className='example'>Module Preclusions: MA1100,CS1231S</span>
-          <span className='example'>Major: Computer Science, Computer Engineer</span>
+          <span className='example'>Major: Computer Science,Computer Engineer</span>
           <span className='example'>Module Details: This module introduces mathematical tools required in the study of computer science.</span>
         </p>
       </div>
