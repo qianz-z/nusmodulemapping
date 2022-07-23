@@ -6,8 +6,8 @@ const initialValues = {
   name: "",
   code: "",
   mc: "",
-  prereq: "",
-  preclusions: "",
+  prereq: [],
+  preclusions: [],
   details: "",
   };
 
@@ -28,8 +28,8 @@ export default function ProfOnlyPage() {
       name: values.name,
       code: values.code,
       mc: values.mc,
-      prereq: values.prereq,
-      preclusions: values.preclusions,
+      prereq: values.prereq.split(","),
+      preclusions: values.preclusions.split(","),
       details: values.details
     };;
     axios.post('http://localhost:3001/profonly', newModule)
@@ -46,6 +46,20 @@ export default function ProfOnlyPage() {
   };
 
   return (
+    <div>
+      <div className='text'>
+        <p>Hello Professors! This page is for you to add in additional modules into the database so that the students can take!</p>
+        <p>Do take note that if there are more that one prerequisites or preclusions, you can separate them by adding commas!</p>
+        <p>For example, 
+          <span className='example'>Module Name: Discrete Structure </span>
+          <span className='example'>Module Code: CS1231 </span>
+          <span className='example'>Module Credits: 4</span>
+          <span className='example'>Module Prerequisites: </span>
+          <span className='example'>Module Preclusions: MA1100,CS1231S</span>
+          <span className='example'>Module Details: This module introduces mathematical tools required in the study of computer science.</span>
+        </p>
+      </div>
+    
         <form  onSubmit = {handleSubmit} className = "form">
             <label>Module Name: </label>
             <input
@@ -103,5 +117,6 @@ export default function ProfOnlyPage() {
 
           <button type = "submit" > Submit </button>
         </form>
+      </div>
   );
 }

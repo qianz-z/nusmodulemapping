@@ -24,7 +24,7 @@ router.route("/profonly").post((req, res) => {
     });
 
     // Module.aggregate([
-    //     { $prereq: { split_name: { $split: [ "$prereq", " " ] } } },
+    //     { $project: { prereq: { $split: [ "$prereq", "," ] } } },
     //   ])
 
     newModule.save();
