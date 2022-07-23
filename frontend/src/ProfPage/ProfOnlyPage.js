@@ -50,7 +50,7 @@ export default function ProfOnlyPage() {
       <div className='text'>
         <p>Hello Professors! This page is for you to add in additional modules into the database so that the students can take!</p>
         <p>Do take note that if there are more that one prerequisites or preclusions, you can separate them by adding commas!</p>
-        <p>For example, 
+        <p><span>Example, </span>
           <span className='example'>Module Name: Discrete Structure </span>
           <span className='example'>Module Code: CS1231 </span>
           <span className='example'>Module Credits: 4</span>

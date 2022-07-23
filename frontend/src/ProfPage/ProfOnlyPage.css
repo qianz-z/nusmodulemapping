@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .form{
-    margin-top: 10px;
+    margin-top: -20px;
     margin-left: clamp(150px, 24%, 24%);
     height:90vh;
     box-sizing: border-box;
@@ -12,8 +14,11 @@
 .text{
     margin-top: 60px;
     margin-left: clamp(150px, 24%, 24%);
+    font-family: 'Josefin', cursive;
 }
 
 .example{
     display: block;
+    font-family: 'Anton', sans-serif;
+    color: grey;
 }
