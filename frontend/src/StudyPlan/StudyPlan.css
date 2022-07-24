@@ -1,12 +1,12 @@
 .studyplan {
+  margin-top: 60px;
+    margin-left: clamp(150px, 24%, 24%);
   width: 80%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: inherit;
   display: block;
-  margin-left: 20%;
-  top: 45px;
 }
 
   .studyplan > p {
