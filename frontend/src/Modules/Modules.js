@@ -70,10 +70,11 @@ function Modules(props) {
                     {errorPrint(preclusionsError)}
                 </div>}
             <div className='modules' >
-                <SearchBar
-                    searchQuery={searchQuery}
-                    setSearchQuery={setSearchQuery}
-                />
+                <div className='searchbar'>
+                    <SearchBar
+                        searchQuery={searchQuery}
+                        setSearchQuery={setSearchQuery}/>
+                </div>
                 {filteredPosts.map(module =>
                     <div className='modules-one'>
                         <h3 className='modules-name'><a onClick={() => { toPage(module) }}>{module.code} {module.name}</a></h3>
