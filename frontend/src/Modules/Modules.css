@@ -1,5 +1,5 @@
 .modules {
-    margin-top: 60px;
+    margin-top: 120px;
     margin-left: clamp(150px, 24%, 24%);
     align-items: center;
     justify-content: center;
@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     padding-block-end: 3%;
+
 }
 
 .modules-name {
@@ -25,10 +26,10 @@
 }
 
 .side {
+    top: 90px;
     font-size: large;
     text-align: center;
     margin-left: 70%;
-    margin-top: -190%; 
     position: fixed;
     border: 2px solid black;
     width: 300px;
@@ -37,12 +38,15 @@
 }
 
 .error {
-    margin-top: 60px;
+    top: 60px;
+    background-color: orange;
     border: 1px solid red;
     width: 78%;
     margin-left: clamp(150px, 20%, 20%);
     text-align: center;
     font-size: 24px;
+    position: fixed;
+    
 }
 
 
