@@ -1,12 +1,12 @@
-/* .modules {
+.modules {
     top: 0;
-    margin-left: clamp(150px, 24%, 24%);
+    margin-left: clamp( 1%, 1%);
     align-items: center;
     justify-content: center;
     height: auto;
-    width: 40%;
+    width: 70%;
     min-width: 100px; 
-} */
+}
 
 .error {
     top: 60px;
